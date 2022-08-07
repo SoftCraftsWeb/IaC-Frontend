@@ -13,3 +13,7 @@ data "aws_iam_policy_document" "bucket_policy_document" {
     }
   }
 }
+
+data "aws_route53_zone" "hosted_zone" {
+  name = var.domain_name
+}
