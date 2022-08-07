@@ -3,9 +3,9 @@ resource "aws_acm_certificate" "cert" {
   subject_alternative_names = ["*.${var.domain_name}"]
   validation_method         = "DNS"
   tags = {
-    "Name"          = "OldWave"
-    "Project"       = "OldWave"
-    "Environment"   = "Production"
+    "Name"          = var.project
+    "Project"       = var.project
+    "Environment"   = var.environment
     "ManagedBy"     = "Terraform"
   }
 }

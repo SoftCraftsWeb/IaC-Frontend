@@ -15,3 +15,16 @@ variable "domain_name" {
   description = "The domain name to use."
   default     = "oldwave.cf"
 }
+
+variable "project" {
+  type        = string
+  description = "The Project name for tag naming resources."
+  default     = "OldWave"
+}
+
+
+variable "environment" {
+  type        = string
+  description = "The env for tag resources."
+  default     = "Production"
+}
