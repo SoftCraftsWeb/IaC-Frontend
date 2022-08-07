@@ -1,10 +1,10 @@
 resource "aws_s3_bucket" "bucket" {
-  bucket_prefix = var.bucket_prefix 
+  bucket = var.bucket_prefix 
 
   tags = {
-    "Name"          = "OldWave"
-    "Project"       = "OldWave"
-    "Environment"   = "Production"
+    "Name"          = var.project
+    "Project"       = var.project
+    "Environment"   = var.environment
     "ManagedBy"     = "Terraform"
   }
 
