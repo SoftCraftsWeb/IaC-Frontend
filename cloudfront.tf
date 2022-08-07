@@ -2,10 +2,9 @@ resource "aws_cloudfront_origin_access_identity" "oai" {
   comment = "OAI for ${var.domain_name}"
 }
 
-# cloudfront terraform - creating AWS Cloudfront distribution :
 resource "aws_cloudfront_distribution" "cf_dist" {
   enabled             = true
-  aliases             = [var.domain_name]
+  aliases             = [var.domain_name, "www.${var.domain_name}"]
   default_root_object = "index.html"
 
   origin {
